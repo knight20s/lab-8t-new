@@ -1,8 +1,6 @@
 package ua.opnu;
 
-/**
- * Кортеж з трьох елементів. Перші два зберігаються у вкладеному GenericTwoTuple (композиція).
- */
+
 public class GenericThreeTuple<T, V, S> {
 
     private final GenericTwoTuple<T, V> pair;
