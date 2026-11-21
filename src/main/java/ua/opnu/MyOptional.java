@@ -1,8 +1,5 @@
 package ua.opnu;
 
-/**
- * Спрощений аналог java.util.Optional: або зберігає значення типу T, або порожній.
- */
 public class MyOptional<T> {
 
     private T value;
