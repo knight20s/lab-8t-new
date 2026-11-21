@@ -31,13 +31,13 @@ public class BookData implements Comparable<BookData> {
     }
 
     public double getRating() {
-        // книга без оцінок має рейтинг 0, щоб не отримати NaN при діленні на нуль
+
         return reviews == 0 ? 0 : total / reviews;
     }
 
     @Override
     public int compareTo(BookData other) {
-        // аргументи переставлені: книга з вищим рейтингом має бути "меншою"
+
         int byRating = Double.compare(other.getRating(), this.getRating());
         if (byRating != 0) {
             return byRating;
