@@ -26,20 +26,20 @@ public class Main {
     private static void task1() {
         System.out.println("=== Завдання 1 ===");
 
-        // 1. Порожнє значення (наприклад, у користувача немає по-батькові)
+
         MyOptional<String> middleName = new MyOptional<>();
         System.out.println(middleName);
         System.out.println("isPresent: " + middleName.isPresent());
         System.out.println("orElse: " + middleName.orElse("немає"));
 
-        // 2. Заповнене значення (наприклад, логін користувача)
+
         MyOptional<String> username = new MyOptional<>("admin");
         System.out.println(username);
         System.out.println("isPresent: " + username.isPresent());
         System.out.println("get(): " + username.get());
         System.out.println("orElse: " + username.orElse("guest"));
 
-        // 3. get() на порожньому об'єкті кидає виняток
+
         try {
             String test = middleName.get();
             System.out.println("unexpected: " + test);
@@ -47,7 +47,7 @@ public class Main {
             System.out.println("Очікуваний виняток: " + ex.getMessage());
         }
 
-        // 4. конструктор не приймає null
+
         try {
             MyOptional<String> broken = new MyOptional<>(null);
             System.out.println("unexpected: " + broken);
